@@ -1,112 +1,202 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Scraper Project</title>
+    <title>BHULOKAM NANDINI | Portfolio</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
+```
+<link rel="stylesheet" href="style.css">
+```
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            margin-top: 20px;
-        }
-
-        th {
-            background-color: #007bff;
-            color: white;
-            padding: 12px;
-        }
-
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        p {
-            text-align: center;
-            color: #555;
-        }
-    </style>
 </head>
 
 <body>
 
-<div class="container">
+```
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">BN</div>
 
-    <h1>Book Data Web Scraper</h1>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1>BHULOKAM NANDINI</h1>
+
+        <h2 id="typing-text">
+            Software Engineer
+        </h2>
+
+        <p>
+            Passionate Software Engineer and Data Science Student
+            with strong skills in Python, Web Development,
+            Machine Learning and Problem Solving.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+
+            <a href="assets/resume.pdf"
+               download
+               class="btn">
+               Download Resume
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+
+    <h2>About Me</h2>
+
+    <div class="card">
+
+        <p>
+            I am a Data Science student interested in
+            Software Development, Python Programming,
+            Artificial Intelligence and Full Stack Development.
+
+            I enjoy building practical applications that
+            solve real-world problems.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">MySQL</div>
+        <div class="skill-card">Git</div>
+        <div class="skill-card">GitHub</div>
+        <div class="skill-card">Machine Learning</div>
+
+    </div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+
+            <h3>Project 1</h3>
+
+            <p>
+                'Student Management System'
+            </p>
+
+            <a href="#">GitHub</a>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Project 2</h3>
+
+            <p>
+                'Web Scraber'
+            </p>
+
+            <a href="#">GitHub</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Education -->
+<section id="education" class="section">
+
+    <h2>Education</h2>
+
+    <div class="card">
+
+        <h3>B.Tech - Data Science</h3>
+
+        <p>
+            Sri Venkateswara College of Engineering and Technology.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+
+    <h2>Contact</h2>
+
+    <form id="contact-form">
+
+        <input
+            type="text"
+            placeholder="BHULOKAM NANDINI"
+            required
+        >
+
+        <input
+            type="email"
+            placeholder="nandhinireddy186@gmail.com"
+            required
+        >
+
+        <textarea
+            placeholder="Your Message"
+            required>
+        </textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</section>
+
+<!-- Footer -->
+<footer>
 
     <p>
-        This project scrapes book information from a website
-        using Python, Requests, BeautifulSoup, and Pandas.
+        © 2026 BHULOKAM NANDINI.
+        All Rights Reserved.
     </p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Book Title</th>
-                <th>Price</th>
-                <th>Availability</th>
-            </tr>
-        </thead>
+</footer>
 
-        <tbody>
-
-            <tr>
-                <td>A Light in the Attic</td>
-                <td>£51.77</td>
-                <td>In Stock</td>
-            </tr>
-
-            <tr>
-                <td>Tipping the Velvet</td>
-                <td>£53.74</td>
-                <td>In Stock</td>
-            </tr>
-
-            <tr>
-                <td>Soumission</td>
-                <td>£50.10</td>
-                <td>In Stock</td>
-            </tr>
-
-            <tr>
-                <td>Sharp Objects</td>
-                <td>£47.82</td>
-                <td>In Stock</td>
-            </tr>
-
-            <tr>
-                <td>Sapiens</td>
-                <td>£54.23</td>
-                <td>In Stock</td>
-            </tr>
-
-        </tbody>
-    </table>
-
-</div>
+<script src="script.js"></script>
+```
 
 </body>
 </html>
